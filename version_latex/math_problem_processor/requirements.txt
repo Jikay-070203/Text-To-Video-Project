@@ -1,0 +1,8 @@
+
+pandas
+scikit-learn
+sympy
+gtts
+manim
+moviepy
+tkinter

@@ -1,0 +1,41 @@
+Hackathon Project
+Title: Text To Video Project using Deep Learning and OpenCV
+
+Importing Dependencies:+ Deep Learning: TensorFlow, Pytorch 
+                       + Video dependencies: OpenCV, MoviePy
+		       + Tools for Code: Google Colab, Visual Studio Code
+
+Processes: 
+* Prepare data
+ Data preparation   ==> Preprocessing data   
+(+ dataset that         (use Capcut, or
+  have                   other types of 
+  videos and prompts     video editors)
++ source: movie show,    + Separate prompts 
+   everyday vlog,        from videos
+   tv shows, TVC,...)    + Convert video file
+                         extensions to what type
+                         do you want to use
+
+
+* Train model
+
+Analyze words                 Clean the prompt data         Video Preprocessing                    
+that appear most,      ==>    + Remove stop-words,     ==>  + Retrieve all video frames      --|  
+sentence, and the               weird character, etc        + Convert all frames to Tensor     |
+length of the video.                                        				       |
+                 ------------------------------------------------------------------------------
+                 |
+                 |    Train the Dataset                                                Combine two models into one model
+     |--->       ===> + Prompts (text): Convert all the text to vector database   ===> Use "Attention Mechanism" or "Transformation-based" (SOTA) ------
+     |                using NLP, BERT, or GPT-3                                        --> optimize two models.                                        |
+     |                + Video: Use RNN / LSTM to preprocess the series of frames                                                                       |
+     |If not                                                                                          		      ---------------------------------|
+     |success                                                                                                         |
+     |                                                                                   Train model                  |
+     ---------Save the model to file .h5 <----Evaluate the result<-----------------Use the proper model to train <----|
+
+After have the model .h5
+Post the model .h5 on Cloud (AWS, Azure) ===> Create a Web Application to enter a prompt then generate a video
+   (have API)                                           Call your API that you've trained to web app --> See a result
+
